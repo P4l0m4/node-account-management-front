@@ -1,17 +1,13 @@
 <template>
   <nav class="nav">
-    <router-link class="nav__link" :to="{ name: 'home-page' }" exact
-      >Home</router-link
-    >
+    <router-link class="nav__link" :to="{ name: 'home-page' }" exact>Home</router-link>
     |
-    <router-link class="nav__link" :to="{ name: 'my-account' }" exact
-      >My account</router-link
-    >
+    <router-link class="nav__link" :to="{ name: 'my-account' }" exact>My account</router-link>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss" scoped>

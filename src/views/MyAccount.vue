@@ -2,34 +2,20 @@
   <main>
     <h1>My account</h1>
     <div class="account-infos">
-      <p>Name: {{ result.firstName }} {{ result.lastName }}</p>
+      <p>{{ user.firstName }}</p>
     </div>
   </main>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  data() {
-    return {
-      firstName: "",
-      lastName: "",
-      result: null,
-    };
+  computed: {
+    ...mapState({
+      user: state => state.user.user,
+    }),
   },
-  components: {},
-  methods: {
-    getName(result) {
-      if (result != null) {
-        this.result = result;
-      } else {
-        console.log("result is null" + result);
-      }
-    },
-  },
-  mounted() {
-    this.getName(result);
-  },
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,33 +1,33 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import HomeView from "@/views/HomeView.vue";
-import AccountCreated from "@/views/AccountCreated.vue";
-import MyAccount from "@/views/MyAccount";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import HomeView from '@/views/HomeView.vue'
+import AccountCreated from '@/views/AccountCreated.vue'
+import MyAccount from '@/views/MyAccount'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home-page",
+    path: '/',
+    name: 'Home',
     component: HomeView,
   },
   {
-    path: "/account-created",
-    name: "account-created",
+    path: '/account-created',
+    name: 'AccountCreated',
     component: AccountCreated,
   },
   {
-    path: "/my-account",
-    name: "my-account",
+    path: '/my-account',
+    name: 'MyAccount',
     component: MyAccount,
   },
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes,
-});
+})
 
-export default router;
+export default router
